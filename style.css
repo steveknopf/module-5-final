@@ -1,0 +1,307 @@
+p {
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  list-style-type: none;
+}
+
+.hidden {
+  display: none;
+}
+
+html {
+  background-image: url('assets/SimplyRecipes_HoneyPopcorn_LEAD_3-0865af29c73a43988eddf2593a76a654.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#page__content {
+  flex: 1;
+}
+
+/* NAV */
+
+#nav {
+    display: flex;
+    padding-top: 32px;
+    height: 40px;
+    background-color: black;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  position: relative;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.nav__header {
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.nav__container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.nav__row {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  color: white;
+  
+}
+/* search bar*/
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  max-width: 400px;
+  margin: 20px auto;
+  border: 2px solid black;
+  border-radius: 25px;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.search-container input[type="search"] {
+  flex: 1;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-container button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-container button:hover {
+  background-color: #0056b3;
+}
+
+/* results */
+
+#displayResults {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+.movie__card {
+  max-width: 100%;
+  padding: 16px;
+  border: 2px solid black;
+  
+/* MODAL*/
+
+}
+#modal__overlay {
+  position: fixed;
+  background-color: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0; left: 0; width: 100%; height: 100%;
+  transition: ease 500ms;
+}
+
+#modal__overlay.hidden {
+  display: none;
+}
+
+.modal__content {
+  position: relative;
+  background-color: black;
+  color: white;
+  width: 90%;
+  max-width: 400px;
+  padding: 24px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+#modal__details {
+  max-height: 70vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+#modal__details img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+#modal__close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 18px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.movie__card {
+  cursor: pointer;
+  background-color: white;
+  border-radius: 5%;
+}
+
+/* spinner*/
+
+#loading__spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: red;
+}
+
+#loading__spinner.hidden {
+  display: none;
+}
+
+/* filter */
+
+.filter__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 0 auto 20px;
+  font-family: sans-serif;
+}
+
+.filter__container button {
+  background-color: #7342d6;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.filter__container input,
+.filter__container select {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.filter__container.hidden {
+  display: none;
+}
+
+/* footer */
+
+
+footer {
+    padding: 20px 32px;
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer__copyright {
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 500;
+}
+
+/* responsive */
+
+@media (max-width: 768px) {
+  .nav__header h1 {
+    font-size: 16px;
+  }
+
+  .search {
+    min-height: 50vh;
+  }
+
+  .modal__content {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter__container {
+    flex-direction: column;
+  }
+
+  .movie__card {
+    width: 100%;
+  }
+}
